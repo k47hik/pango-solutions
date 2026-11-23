@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeldPro, welding simulation | Pango Solutions</title>
+<meta name="description" content="WeldPro adds welding to SiM2Pro: Goldak, Gaussian, conical and cylindrical heat sources, weld paths, filler added with the torch, and stress steps driven by the weld.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Pango Solutions home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6961"/><stop offset=".55" stop-color="#ff453a"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1d1d1f"/>
+        <path d="M9.5 12 C9.5 5 22.5 5 22.5 12 C22.5 16 13.5 19 9.5 24.5 L22.5 24.5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#1d1d1f" stroke="#ffffff" stroke-width="1.5"><circle cx="9.5" cy="12" r="2.1"/><circle cx="22.5" cy="12" r="2.1"/><circle cx="9.5" cy="24.5" r="2.1"/><circle cx="22.5" cy="24.5" r="2.1"/></g>
+      </svg>
+      <span class="wm">SiM<b>2</b>Pro <small>by Pango Solutions</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <div class="drop">
+        <a href="products.html" aria-current="page">Products <span class="caret" aria-hidden="true"></span></a>
+        <div class="menu">
+          <p class="menu-head">Platform</p>
+          <a href="sim2pro.html"><b>SiM2Pro</b><span>Finite element software</span></a>
+          <p class="menu-head">Plugins for SiM2Pro</p>
+          <a class="plug" href="weldpro.html"><b>WeldPro</b><span>Welding</span></a>
+          <a class="plug" href="htpro.html"><b>HTPro</b><span>Heat treatment</span></a>
+          <a class="plug" href="metapro.html"><b>MetaPro</b><span>Metallurgy</span></a>
+          <a class="plug" href="matpro.html"><b>MatPro</b><span>Composites</span></a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="learn.html">Learn</a>
+      <a class="btn btn-accent nav-cta" href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="phero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="crumb"><a href="products.html">Products</a> / WeldPro</p>
+      <h1>WeldPro. <em>See the weld before you strike the arc.</em></h1>
+      <p class="lede">Describe the torch, the path and the filler. WeldPro moves the heat source across the part, lays the bead as it goes, and hands the temperatures to the stress analysis.</p>
+      <div class="cta-row"><a class="btn btn-accent" href="contact.html">Discuss a weld</a><a class="btn btn-ghost" href="products.html">All products</a></div>
+    </div>
+    <div class="hero-media">
+    <figure class="hero-photo anim" data-frames="84" data-base="assets/weld/f" data-slow="12">
+      <img class="stage-anim" src="assets/weld-ring-poster.jpg" width="1600" height="1000" alt="Temperature in a nozzle-to-plate ring weld as the fillet bead is laid sector by sector, computed with WeldPro" fetchpriority="high">
+    </figure>
+      <p class="fine anim-note">A demonstration: assumed geometry and material, CalculiX thermal run. The deposit temperature is set to give a 1000 C peak, so the peak is an input, not a result.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap two">
+    <div>
+      <h2>Five heat sources, <em>one torch frame.</em></h2>
+      <ul class="ticks">
+        <li><b>Goldak double ellipsoid</b> for arc welding</li>
+        <li><b>Gaussian surface</b>, round or elliptical</li>
+        <li><b>Conical</b> for keyhole and laser welds</li>
+        <li><b>Cylindrical</b>, a line source through the thickness</li>
+        <li><b>Superposition</b> of sources for hybrid laser-arc</li>
+      </ul>
+      <p class="fine">The mesh receives exactly the power of the model, whatever the element size.</p>
+    </div>
+  </div>
+  <figure class="wrap hero-photo anim" data-frames="50" data-base="assets/weld-sources/f" data-slow="10">
+    <img class="stage-anim" src="assets/weld-sources-poster.jpg" width="1600" height="1000" alt="Four welding heat sources, Goldak double ellipsoid, Gaussian surface, conical and cylindrical, each moving along the same plate at the same power and speed, temperatures computed with WeldPro and CalculiX" loading="lazy">
+  </figure>
+  <p class="wrap fine anim-note">Four CalculiX runs, one per source: 1000 W at 5 mm/s on a 60 x 30 x 6 mm plate, constant stand-in properties, no melting modelled. Peak values depend on the mesh; compare the shapes of the fields.</p>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Inputs a welding engineer <em>already has.</em></h2>
+    <div class="grid feat-grid">
+      <article class="feat"><h3>Weld parameters</h3><p>Arc power from current, voltage and efficiency. A pulsed arc gives each interval its exact mean power.</p></article>
+      <article class="feat"><h3>Weld path</h3><p>A line, or an arc through three picked points. A toe point sets the torch axis, which turns along a girth weld.</p></article>
+      <article class="feat"><h3>Filler and stress</h3><p>Filler is removed at the start and added as the torch reaches it. One more action adds the stress steps the weld drives.</p></article>
+    </div>
+    <div class="spec wide-spec">
+      <div><span>Solvers</span><b>CalculiX and the SfePy thermal solver, on the same fluxes</b></div>
+      <div><span>Units</span><b>Type "5 mm/s" or "3 kW". Fields take the unit with the number</b></div>
+      <div><span>Live plots</span><b>Absorbed power against time, power density of the source, the path on the part</b></div>
+      <div><span>Checked on</span><b>A moving surface source on a thick plate and a line source through a thin plate, against the analytical solutions (Carslaw &amp; Jaeger; Eagar &amp; Tsai, 1983), with Rosenthal's solution as the steady limit</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta band">
+  <div class="wrap band-in">
+    <div>
+      <h2>Tell us about <em>your part.</em></h2>
+      <p class="sub">The part, the process, the question. We reply with what a study would take and what it would show.</p>
+    </div>
+    <a class="btn btn-accent" href="contact.html">Discuss your case</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html"><span>Pango Solutions</span></a>
+      <p>Makers of SiM2Pro. Finite element software for manufacturing processes, and the engineering around it.</p>
+      <p class="addr">Madipakkam, Chennai, Tamil Nadu<br><a href="tel:+918248466597">+91 82484 66597</a><br><a class="mail-link" href="mailto:m2pro.engg@gmail.com">m2pro.engg@gmail.com</a></p>
+    </div>
+    <nav aria-label="Products">
+      <b>Products</b>
+      <a href="sim2pro.html">SiM2Pro</a><a href="weldpro.html">WeldPro</a><a href="htpro.html">HTPro</a><a href="metapro.html">MetaPro</a><a href="matpro.html">MatPro</a>
+    </nav>
+    <nav aria-label="Company">
+      <b>Company</b>
+      <a href="services.html">Services</a><a href="learn.html">Learn</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal"><span>&copy; <span id="year"></span> Pango Solutions</span><span>CalculiX, Gmsh, OpenFOAM, PrePoMax and SfePy are the work of their own authors.</span><span>Photographs via Wikimedia Commons. <a href="credits.html">Credits</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

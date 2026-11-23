@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn: worked examples, verification and training | Pango Solutions</title>
+<meta name="description" content="Learn SiM2Pro: first commands, worked examples from forming to composites, the benchmark results, how to connect an AI agent, and training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Pango Solutions home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6961"/><stop offset=".55" stop-color="#ff453a"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1d1d1f"/>
+        <path d="M9.5 12 C9.5 5 22.5 5 22.5 12 C22.5 16 13.5 19 9.5 24.5 L22.5 24.5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#1d1d1f" stroke="#ffffff" stroke-width="1.5"><circle cx="9.5" cy="12" r="2.1"/><circle cx="22.5" cy="12" r="2.1"/><circle cx="9.5" cy="24.5" r="2.1"/><circle cx="22.5" cy="24.5" r="2.1"/></g>
+      </svg>
+      <span class="wm">SiM<b>2</b>Pro <small>by Pango Solutions</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <div class="drop">
+        <a href="products.html">Products <span class="caret" aria-hidden="true"></span></a>
+        <div class="menu">
+          <p class="menu-head">Platform</p>
+          <a href="sim2pro.html"><b>SiM2Pro</b><span>Finite element software</span></a>
+          <p class="menu-head">Plugins for SiM2Pro</p>
+          <a class="plug" href="weldpro.html"><b>WeldPro</b><span>Welding</span></a>
+          <a class="plug" href="htpro.html"><b>HTPro</b><span>Heat treatment</span></a>
+          <a class="plug" href="metapro.html"><b>MetaPro</b><span>Metallurgy</span></a>
+          <a class="plug" href="matpro.html"><b>MatPro</b><span>Composites</span></a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="learn.html" aria-current="page">Learn</a>
+      <a class="btn btn-accent nav-cta" href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="phero">
+  <div class="wrap">
+    <h1>Start with a part <em>you know well.</em></h1>
+    <p class="lede">First commands, worked examples you can open and re-run, the benchmark numbers, and training when you want a guide.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <h2>Three commands <em>to a result.</em></h2>
+      <p class="sub">Open the studio, load a worked example, then run the benchmarks on your own machine.</p>
+    </div>
+    <pre class="code big" aria-label="Commands"><code><span class="c"># the studio</span>
+python -m sim2pro
+<span class="c"># open a worked example</span>
+python -m sim2pro --example cantilever
+<span class="c"># benchmarks against theory</span>
+python -m sim2pro.verification</code></pre>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>Guides that ship <em>with the software.</em></h2>
+    <p class="sub">Each one goes from mesh to result, with the script that rebuilds it.</p>
+    <div class="grid ex-grid">
+      <article class="ex"><img loading="lazy" src="assets/deep-drawing.png" alt="Deep drawing of a sheet: stress and plastic strain" width="1200" height="400"><div><h3>Deep drawing</h3><p>A sheet drawn over a die with rigid tools: forces, stages, stress and plastic strain.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/quench-field.png" alt="Temperature in a quenched cylinder at four times" width="681" height="546"><div><h3>Quench of a cylinder</h3><p>Film coefficients from thermocouples, then the temperature field through the quench.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/weld-field.png" alt="Temperature near the interface of an inertia friction weld" width="723" height="499"><div><h3>Inertia friction weld</h3><p>Friction law, flywheel run-down and the temperature near the interface.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/buckling-mode.png" alt="First buckling mode of an I-beam" width="900" height="560"><div><h3>I-beam, lateral-torsional buckling</h3><p>Buckling modes of a beam under point and line loads.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/topology.png" alt="Topology optimised beam" width="900" height="520"><div><h3>Topology of a bending beam</h3><p>Material removed pass by pass while the stress is watched.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/ply-envelopes.png" alt="Failure envelopes of a composite ply" width="640" height="420"><div><h3>Ply failure envelopes</h3><p>Four failure criteria on one ply, then a laminate and a coupon.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/concrete-damage.png" alt="Damage in a reinforced concrete beam" width="864" height="552"><div><h3>Reinforced beam, four-point bending</h3><p>Cracking and crushing stages up to the end of the test.</p></div></article>
+      <article class="ex"><img loading="lazy" src="assets/htpro-stress.png" alt="Axial residual stress in a quenched cylinder" width="1070" height="349"><div><h3>Stress after a quench</h3><p>Residual stress and plastic strain left by the cooling and the transformation.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="verification">
+  <div class="wrap">
+    <h2>Honest numbers, <em>printed every release.</em></h2>
+    <p class="sub">A sample of the benchmark registry. Each row is a run you can repeat on your own machine.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Benchmark</th><th>Quantity</th><th class="r">Computed</th><th class="r">Reference</th><th class="r">Error</th></tr></thead>
+        <tbody>
+          <tr><td><b>C01</b> Constrained plate, uniform heating</td><td>In-plane stress</td><td class="r">−359.99 MPa</td><td class="r">−360.00 MPa</td><td class="r"><span class="pill">0.004 %</span></td></tr>
+          <tr><td><b>C02</b> Copper / invar strip heated by 100 K</td><td>Tip deflection</td><td class="r">5.793 mm</td><td class="r">5.709 mm</td><td class="r"><span class="pill">1.47 %</span></td></tr>
+          <tr><td><b>C03</b> Satoh test, S355 bar</td><td>Elastic stress at 100 °C</td><td class="r">−209.40 MPa</td><td class="r">−209.66 MPa</td><td class="r"><span class="pill">0.13 %</span></td></tr>
+          <tr><td><b>L03</b> Cantilever, tip load 1 MN</td><td>Tip deflection</td><td class="r">19.063 mm</td><td class="r">19.048 mm</td><td class="r"><span class="pill">0.08 %</span></td></tr>
+          <tr><td><b>L06</b> Bar, suddenly applied load</td><td>Peak / static displacement</td><td class="r">1.992</td><td class="r">2.000</td><td class="r"><span class="pill">0.42 %</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap two">
+    <div>
+      <h2>Let an agent <em>build the study.</em></h2>
+      <p class="sub">SiM2Pro calls no language model itself. It serves the Model Context Protocol, and Claude Code connects as the client.</p>
+      <p class="note">The server answers on your own machine only, needs a token, and has a read-only mode.</p>
+    </div>
+    <ol class="biglist">
+      <li><span class="num">01</span><b>Start the server</b>Tools, Agent (MCP) panel, Connect. The dialog starts it and finds Claude Code.</li>
+      <li><span class="num">02</span><b>Sign in</b>A Claude account, an Anthropic API key or an OpenRouter key. SiM2Pro stores none of them.</li>
+      <li><span class="num">03</span><b>Ask</b>Write what you want in the panel. Every change shows in the tree and the journal, and can be undone.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="svc trainbox">
+      <div>
+        <h3>Training</h3>
+        <p class="svc-lead">Prefer a guide in the room?</p>
+        <p>Courses built around your parts and your process: the studio and its products, nonlinear analysis, and scripting a study.</p>
+      </div>
+      <a class="btn btn-accent" href="services.html#training">See training</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta band">
+  <div class="wrap band-in">
+    <div>
+      <h2>Tell us about <em>your part.</em></h2>
+      <p class="sub">The part, the process, the question. We reply with what a study would take and what it would show.</p>
+    </div>
+    <a class="btn btn-accent" href="contact.html">Discuss your case</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html"><span>Pango Solutions</span></a>
+      <p>Makers of SiM2Pro. Finite element software for manufacturing processes, and the engineering around it.</p>
+      <p class="addr">Madipakkam, Chennai, Tamil Nadu<br><a href="tel:+918248466597">+91 82484 66597</a><br><a class="mail-link" href="mailto:m2pro.engg@gmail.com">m2pro.engg@gmail.com</a></p>
+    </div>
+    <nav aria-label="Products">
+      <b>Products</b>
+      <a href="sim2pro.html">SiM2Pro</a><a href="weldpro.html">WeldPro</a><a href="htpro.html">HTPro</a><a href="metapro.html">MetaPro</a><a href="matpro.html">MatPro</a>
+    </nav>
+    <nav aria-label="Company">
+      <b>Company</b>
+      <a href="services.html">Services</a><a href="learn.html">Learn</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal"><span>&copy; <span id="year"></span> Pango Solutions</span><span>CalculiX, Gmsh, OpenFOAM, PrePoMax and SfePy are the work of their own authors.</span><span>Photographs via Wikimedia Commons. <a href="credits.html">Credits</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

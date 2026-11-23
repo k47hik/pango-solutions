@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | Pango Solutions</title>
+<meta name="description" content="SiM2Pro, the finite element platform, and its process products: WeldPro for welding, HTPro for heat treatment, MetaPro for metallurgy and MatPro for composites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Pango Solutions home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6961"/><stop offset=".55" stop-color="#ff453a"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1d1d1f"/>
+        <path d="M9.5 12 C9.5 5 22.5 5 22.5 12 C22.5 16 13.5 19 9.5 24.5 L22.5 24.5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#1d1d1f" stroke="#ffffff" stroke-width="1.5"><circle cx="9.5" cy="12" r="2.1"/><circle cx="22.5" cy="12" r="2.1"/><circle cx="9.5" cy="24.5" r="2.1"/><circle cx="22.5" cy="24.5" r="2.1"/></g>
+      </svg>
+      <span class="wm">SiM<b>2</b>Pro <small>by Pango Solutions</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <div class="drop">
+        <a href="products.html" aria-current="page">Products <span class="caret" aria-hidden="true"></span></a>
+        <div class="menu">
+          <p class="menu-head">Platform</p>
+          <a href="sim2pro.html"><b>SiM2Pro</b><span>Finite element software</span></a>
+          <p class="menu-head">Plugins for SiM2Pro</p>
+          <a class="plug" href="weldpro.html"><b>WeldPro</b><span>Welding</span></a>
+          <a class="plug" href="htpro.html"><b>HTPro</b><span>Heat treatment</span></a>
+          <a class="plug" href="metapro.html"><b>MetaPro</b><span>Metallurgy</span></a>
+          <a class="plug" href="matpro.html"><b>MatPro</b><span>Composites</span></a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="learn.html">Learn</a>
+      <a class="btn btn-accent nav-cta" href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="phero">
+  <div class="wrap">
+    <h1>One platform. <em>Add the process you need.</em></h1>
+    <p class="lede">SiM2Pro is the workbench. WeldPro, HTPro, MetaPro and MatPro each add one field of physics, with their own dialogs and their own checks.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2 class="sr-only">The platform and its products</h2>
+    <a class="prod wide tall" href="sim2pro.html">
+      <div><h3>SiM2Pro <small>Platform</small></h3><p>A desktop studio over a typed Python model: import or sketch the geometry, mesh it, set up the study, solve with CalculiX or the built-in solver, review the results. Every action is recorded as a script, and an AI agent can drive the whole thing.</p><span class="more">See the platform</span></div>
+      <figure class="plat-slides slides" data-every="2000">
+        <img class="stage-anim slide is-on" data-frames="51" data-base="assets/loader/f" data-slow="6" src="assets/loader-poster.jpg" width="1600" height="1000" alt="Knuckle-boom loader arm under a hook load rising to 30 kN, von Mises stress on the deformed steel structure, computed with CalculiX" loading="lazy">
+        <img class="stage-anim slide" data-frames="64" data-base="assets/buckling/f" data-slow="6" src="assets/buckling-poster.jpg" width="1600" height="1000" alt="A 12 m steel I-beam under end moments buckling sideways and twisting, lateral-torsional buckling past the critical moment, coloured by displacement, computed with CalculiX" loading="lazy">
+        <img class="stage-anim slide" data-frames="50" data-base="assets/tower/f" data-slow="6" src="assets/tower-poster.jpg" width="1600" height="1000" alt="Four-legged steel tower with X-bracing leaning under wind and deck loads, members coloured by von Mises stress, computed with CalculiX" loading="lazy">
+      </figure>
+    </a>
+
+    <div class="grid prod-grid two-col">
+      <a class="prod pic" href="weldpro.html">
+        <h3>WeldPro <small>Welding</small></h3>
+        <p>Goldak, Gaussian, conical and cylindrical heat sources moving along a weld path. Filler is added as the torch passes, and the temperatures drive the stress steps.</p>
+        <span class="more">See WeldPro</span>
+        <img class="prod-img" loading="lazy" src="assets/photo-welding.jpg" alt="" width="2000" height="1442">
+      </a>
+      <a class="prod pic" href="htpro.html">
+        <h3>HTPro <small>Heat treatment</small></h3>
+        <p>Quenching and carburizing of steel parts: film coefficients from thermocouples, phases on cooling, residual stress and distortion.</p>
+        <span class="more">See HTPro</span>
+        <img class="prod-img" loading="lazy" src="assets/photo-quench.jpg" alt="" width="2000" height="1630">
+      </a>
+      <a class="prod pic" href="metapro.html">
+        <h3>MetaPro <small>Metallurgy</small></h3>
+        <p>CCT diagrams of low alloy steels from composition and grain size, critical temperatures, and the analysis of dilatometer curves.</p>
+        <span class="more">See MetaPro</span>
+        <img class="prod-img" loading="lazy" src="assets/photo-metallography.jpg" alt="" width="1000" height="839">
+      </a>
+      <a class="prod pic" href="matpro.html">
+        <h3>MatPro <small>Composites</small></h3>
+        <p>Unit-cell micromechanics, classical lamination theory, failure criteria and progressive failure, as one product.</p>
+        <span class="more">See MatPro</span>
+        <img class="prod-img" loading="lazy" src="assets/photo-composite.jpg" alt="" width="2400" height="1800">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>Smaller pieces <em>that plug in the same way.</em></h2>
+    <div class="grid feat-grid two-up">
+      <article class="feat"><h3>Coupled thermo-mechanics</h3><p>Temperature and displacement solved together, or in sequence with the field passed on. Benchmarked on a constrained plate, a bimetal strip and the Satoh test.</p></article>
+      <article class="feat"><h3>Concrete damaged plasticity</h3><p>Cracking in tension and crushing in compression, tested at a material point, with a reinforced beam in four-point bending as the worked example.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Interfaces <em>to the solvers you already trust.</em></h2>
+    <p class="sub">SiM2Pro does not replace these tools. It prepares their input and reads the answer back. Two are ready; the CALPHAD interface is in development.</p>
+    <div class="grid feat-grid">
+      <article class="feat"><h3>OpenFOAM <small>fluid flow</small></h3><p>Writes a runnable steady incompressible case from your mesh and reads FoamFile dictionaries back. OpenFOAM does the solving.</p><a class="tlink" href="sim2pro.html#openfoam">How it works</a></article>
+      <article class="feat"><h3>CALPHAD <small>thermodynamics · in development</small></h3><p>Will bring equilibrium data from a CALPHAD solver into the metallurgy and heat treatment studies. Not released yet.</p><a class="tlink" href="metapro.html">See MetaPro</a></article>
+      <article class="feat"><h3>MCP <small>AI agents</small></h3><p>Serves the Model Context Protocol, so an outside AI agent can build and run a study through typed tools. SiM2Pro calls no AI model itself.</p><a class="tlink" href="learn.html">How to connect one</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta band">
+  <div class="wrap band-in">
+    <div>
+      <h2>Tell us about <em>your part.</em></h2>
+      <p class="sub">The part, the process, the question. We reply with what a study would take and what it would show.</p>
+    </div>
+    <a class="btn btn-accent" href="contact.html">Discuss your case</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html"><span>Pango Solutions</span></a>
+      <p>Makers of SiM2Pro. Finite element software for manufacturing processes, and the engineering around it.</p>
+      <p class="addr">Madipakkam, Chennai, Tamil Nadu<br><a href="tel:+918248466597">+91 82484 66597</a><br><a class="mail-link" href="mailto:m2pro.engg@gmail.com">m2pro.engg@gmail.com</a></p>
+    </div>
+    <nav aria-label="Products">
+      <b>Products</b>
+      <a href="sim2pro.html">SiM2Pro</a><a href="weldpro.html">WeldPro</a><a href="htpro.html">HTPro</a><a href="metapro.html">MetaPro</a><a href="matpro.html">MatPro</a>
+    </nav>
+    <nav aria-label="Company">
+      <b>Company</b>
+      <a href="services.html">Services</a><a href="learn.html">Learn</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal"><span>&copy; <span id="year"></span> Pango Solutions</span><span>CalculiX, Gmsh, OpenFOAM, PrePoMax and SfePy are the work of their own authors.</span><span>Photographs via Wikimedia Commons. <a href="credits.html">Credits</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatPro, composites from fibre to failure | Pango Solutions</title>
+<meta name="description" content="MatPro adds composites to SiM2Pro as one product: unit-cell micromechanics, classical lamination theory, failure criteria, a ply failure analyser and progressive failure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Pango Solutions home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6961"/><stop offset=".55" stop-color="#ff453a"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1d1d1f"/>
+        <path d="M9.5 12 C9.5 5 22.5 5 22.5 12 C22.5 16 13.5 19 9.5 24.5 L22.5 24.5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#1d1d1f" stroke="#ffffff" stroke-width="1.5"><circle cx="9.5" cy="12" r="2.1"/><circle cx="22.5" cy="12" r="2.1"/><circle cx="9.5" cy="24.5" r="2.1"/><circle cx="22.5" cy="24.5" r="2.1"/></g>
+      </svg>
+      <span class="wm">SiM<b>2</b>Pro <small>by Pango Solutions</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <div class="drop">
+        <a href="products.html" aria-current="page">Products <span class="caret" aria-hidden="true"></span></a>
+        <div class="menu">
+          <p class="menu-head">Platform</p>
+          <a href="sim2pro.html"><b>SiM2Pro</b><span>Finite element software</span></a>
+          <p class="menu-head">Plugins for SiM2Pro</p>
+          <a class="plug" href="weldpro.html"><b>WeldPro</b><span>Welding</span></a>
+          <a class="plug" href="htpro.html"><b>HTPro</b><span>Heat treatment</span></a>
+          <a class="plug" href="metapro.html"><b>MetaPro</b><span>Metallurgy</span></a>
+          <a class="plug" href="matpro.html"><b>MatPro</b><span>Composites</span></a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="learn.html">Learn</a>
+      <a class="btn btn-accent nav-cta" href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="phero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="crumb"><a href="products.html">Products</a> / MatPro</p>
+      <h1>MatPro. <em>One composites product, fibre to failed ply.</em></h1>
+      <p class="lede">Micromechanics, laminate design and failure analysis used to be separate tools. MatPro is all of them in one, on the same material data.</p>
+      <div class="cta-row"><a class="btn btn-accent" href="contact.html">Discuss a laminate</a><a class="btn btn-ghost" href="products.html">All products</a></div>
+    </div>
+    <div class="hero-media">
+    <figure class="hero-photo anim" data-frames="76" data-base="assets/matpro-progressive/f" data-slow="10">
+      <img class="stage-anim" src="assets/matpro-progressive-poster.jpg" width="1600" height="1000" alt="Stress-strain curve of a [0/90]s carbon/epoxy laminate traced to failure: the 90 degree plies crack at 567 MPa, the 0 degree plies break at 1418 MPa, computed with MatPro" fetchpriority="high">
+    </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Each scale hands <em>its result to the next.</em></h2>
+    <ol class="pipe three">
+      <li><span class="num">01 · Micro</span><h3>Constituents to a ply</h3><p>A finite element unit cell of fibre and matrix gives the ply's stiffness, expansion and conductivity.</p></li>
+      <li><span class="num">02 · Laminate</span><h3>Plies to a laminate</h3><p>Classical lamination theory gives the ABD matrix, engineering constants and the stress in every ply.</p></li>
+      <li><span class="num">03 · Structure</span><h3>Laminate to a part</h3><p>The analyser reads a solved shell model and checks every ply against the failure criteria.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap two">
+    <div>
+      <h2>Build the cell, <em>get the ply.</em></h2>
+      <ul class="ticks">
+        <li>Unidirectional fibres in hexagonal packing</li>
+        <li>Ellipsoid arrays and a plain weave</li>
+        <li>Templates: fillers, short fibres, honeycomb, lattice</li>
+        <li>Closed-form mean-field models beside the cell, for a quick check</li>
+        <li>The result becomes a material card for a study</li>
+      </ul>
+    </div>
+    <figure class="plot"><img loading="lazy" src="assets/matpro-cell.png" alt="Voxel mesh of a hex-packed unidirectional unit cell, fibre and matrix" width="560" height="640"></figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <h2>Type the layup. <em>Read the laminate.</em></h2>
+    </div>
+    <div>
+      <ul class="ticks">
+        <li>Stacking sequences as text, such as <code>[0/45/-45/90]s</code></li>
+        <li>ABD matrix and engineering constants</li>
+        <li>Thermal expansion of the laminate</li>
+        <li>Strain and stress in each ply</li>
+        <li>An equivalent 3D solid for a solid-element model</li>
+      </ul>
+    </div>
+  </div>
+  <figure class="wrap hero-photo anim" data-frames="50" data-base="assets/comp-part/f" data-slow="5">
+    <img class="stage-anim" src="assets/comp-part-poster.jpg" width="1600" height="1000" alt="Quasi-isotropic carbon/epoxy plate with a central hole pulled in tension: the worst-ply Tsai-Wu index rises with load and peaks at the hole edge, where a 90 degree ply fails first, computed with MatPro and CalculiX" loading="lazy">
+  </figure>
+  <p class="wrap fine anim-note">Open-hole tension of a [(0/45/90/-45)2]s T300H/3900-2 plate, 100 x 36 mm with a 6 mm hole: CalculiX composite shells, every ply checked by MatPro at each load step. First ply failure at about 287 N/mm, against 1018 N/mm without the hole. No damage is modelled after first failure.</p>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>First ply failure, <em>and what comes after.</em></h2>
+    <div class="grid svc-grid">
+      <article class="svc">
+        <h3>Four criteria, side by side</h3>
+        <p>Maximum stress, maximum strain, Tsai-Wu and Hashin on the same ply, so you can see where they disagree.</p>
+        <figure class="plot in"><img loading="lazy" src="assets/ply-envelopes.png" alt="Failure envelopes of a T300H/3900-2 ply for four criteria" width="640" height="420"></figure>
+      </article>
+      <article class="svc">
+        <h3>Progressive failure</h3>
+        <p>Ply discounting as a material law: a failed ply loses stiffness and the load moves to the others.</p>
+        <figure class="plot in"><img loading="lazy" src="assets/matpro-progressive.png" alt="Stress-strain curves of a one-element coupon with ply discounting" width="640" height="420"></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta band">
+  <div class="wrap band-in">
+    <div>
+      <h2>Tell us about <em>your part.</em></h2>
+      <p class="sub">The part, the process, the question. We reply with what a study would take and what it would show.</p>
+    </div>
+    <a class="btn btn-accent" href="contact.html">Discuss your case</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html"><span>Pango Solutions</span></a>
+      <p>Makers of SiM2Pro. Finite element software for manufacturing processes, and the engineering around it.</p>
+      <p class="addr">Madipakkam, Chennai, Tamil Nadu<br><a href="tel:+918248466597">+91 82484 66597</a><br><a class="mail-link" href="mailto:m2pro.engg@gmail.com">m2pro.engg@gmail.com</a></p>
+    </div>
+    <nav aria-label="Products">
+      <b>Products</b>
+      <a href="sim2pro.html">SiM2Pro</a><a href="weldpro.html">WeldPro</a><a href="htpro.html">HTPro</a><a href="metapro.html">MetaPro</a><a href="matpro.html">MatPro</a>
+    </nav>
+    <nav aria-label="Company">
+      <b>Company</b>
+      <a href="services.html">Services</a><a href="learn.html">Learn</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal"><span>&copy; <span id="year"></span> Pango Solutions</span><span>CalculiX, Gmsh, OpenFOAM, PrePoMax and SfePy are the work of their own authors.</span><span>Photographs via Wikimedia Commons. <a href="credits.html">Credits</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

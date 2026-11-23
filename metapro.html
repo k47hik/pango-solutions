@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MetaPro, metallurgy and CCT prediction | Pango Solutions</title>
+<meta name="description" content="MetaPro adds metallurgy to SiM2Pro: CCT diagrams of low alloy steels from composition and grain size, critical temperatures, and dilatometry analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Pango Solutions home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6961"/><stop offset=".55" stop-color="#ff453a"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="#1d1d1f"/>
+        <path d="M9.5 12 C9.5 5 22.5 5 22.5 12 C22.5 16 13.5 19 9.5 24.5 L22.5 24.5" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#1d1d1f" stroke="#ffffff" stroke-width="1.5"><circle cx="9.5" cy="12" r="2.1"/><circle cx="22.5" cy="12" r="2.1"/><circle cx="9.5" cy="24.5" r="2.1"/><circle cx="22.5" cy="24.5" r="2.1"/></g>
+      </svg>
+      <span class="wm">SiM<b>2</b>Pro <small>by Pango Solutions</small></span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <div class="drop">
+        <a href="products.html" aria-current="page">Products <span class="caret" aria-hidden="true"></span></a>
+        <div class="menu">
+          <p class="menu-head">Platform</p>
+          <a href="sim2pro.html"><b>SiM2Pro</b><span>Finite element software</span></a>
+          <p class="menu-head">Plugins for SiM2Pro</p>
+          <a class="plug" href="weldpro.html"><b>WeldPro</b><span>Welding</span></a>
+          <a class="plug" href="htpro.html"><b>HTPro</b><span>Heat treatment</span></a>
+          <a class="plug" href="metapro.html"><b>MetaPro</b><span>Metallurgy</span></a>
+          <a class="plug" href="matpro.html"><b>MatPro</b><span>Composites</span></a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="learn.html">Learn</a>
+      <a class="btn btn-accent nav-cta" href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="phero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="crumb"><a href="products.html">Products</a> / MetaPro</p>
+      <h1>MetaPro. <em>Know the steel before you heat it.</em></h1>
+      <p class="lede">Type the composition and the grain size. MetaPro predicts how the steel transforms on cooling, and reads transformation points out of your dilatometer curves.</p>
+      <div class="cta-row"><a class="btn btn-accent" href="contact.html">Discuss your steel</a><a class="btn btn-ghost" href="products.html">All products</a></div>
+    </div>
+    <div class="hero-media">
+    <figure class="hero-photo anim" data-frames="64" data-base="assets/microstructure/f" data-slow="6">
+      <img class="stage-anim" src="assets/microstructure-poster.jpg" width="1600" height="1000" alt="A lattice of random coloured sites coarsens into about 140 polygonal grains over 1000 Monte Carlo steps, while the mean grain area climbs on a log-log plot, computed with MMSP" fetchpriority="high">
+    </figure>
+      <p class="fine anim-note">Grain growth in a Monte Carlo Potts model, computed with MMSP, an open mesoscale code (GPL-3.0), in a separate study; it is not part of MetaPro. Growth only: no nucleation, and no physical time or length scale.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>Four tools <em>in one dialog.</em></h2>
+    <div class="grid q-grid four">
+      <article class="q"><h3>CCT predictor</h3><p>Start and finish curves of ferrite, pearlite and bainite, and martensite, at the cooling rates you choose.</p></article>
+      <article class="q"><h3>Critical temperatures</h3><p>Ae1, Ae3, Acm, Bs and Ms from composition, each with the published formula it comes from.</p></article>
+      <article class="q"><h3>Dilatometry</h3><p>The transformation start of a dilation curve by the offset method.</p></article>
+      <article class="q"><h3>Measured against predicted</h3><p>Load measured start temperatures from a spreadsheet and plot them on the predicted diagram.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark compact center">
+  <div class="wrap">
+    <h2>Phases at equilibrium, <em>hot to cold.</em></h2>
+    <p class="sub">An Fe-1C-5Cr steel cooled from 1900 K to 800 K. Austenite forms from the liquid by 1624 K, M7C3 carbide appears at 1311 K, and ferrite and cementite take over near 1040 K. The bars show each phase's amount at the marked temperature.</p>
+  </div>
+  <figure class="wrap hero-photo anim" data-frames="96" data-base="assets/calphad/f" data-slow="0">
+    <img class="stage-anim" src="assets/calphad-poster.jpg" width="1600" height="1000" alt="Phase amounts in an iron, 1 percent carbon, 5 percent chromium steel as it cools from 1900 to 800 kelvin, calculated with OpenCalphad" loading="lazy">
+  </figure>
+  <p class="wrap fine anim-note">Calculated with OpenCalphad, database steel1, through a separate CALPHAD tool. SiM2Pro's CALPHAD interface is in development.</p>
+</section>
+
+<section class="sec alt">
+  <div class="wrap two">
+    <div>
+      <h2>Published kinetics, <em>cited where they are used.</em></h2>
+      <ul class="ticks">
+        <li>Kinetics of Li, Niebuhr, Meekisho &amp; Atteridge (1998) for ferrite, pearlite and bainite</li>
+        <li>Scheil additivity along the cooling path</li>
+        <li>Carbon partitioning into the remaining austenite</li>
+        <li>Upper and lower bainite told apart</li>
+        <li>Offset method of Yang &amp; Bhadeshia (2007) for dilatometry</li>
+      </ul>
+      <p class="fine">For low alloy steels. In development: a CALPHAD interface, to bring in equilibrium data from an outside thermodynamics solver.</p>
+    </div>
+    <div class="spec">
+      <div><span>Input</span><b>Composition in wt.%, ASTM austenite grain size, and where both come from</b></div>
+      <div><span>Run</span><b>A CCT step at your cooling rates. No mesh needed</b></div>
+      <div><span>Output</span><b>The diagram as a picture, a table (CSV) and data (JSON)</b></div>
+      <div><span>From tests</span><b>Dilatometer curve to transformation start</b></div>
+      <div><span>Feeds</span><b><a class="tlink" href="htpro.html">HTPro</a> and <a class="tlink" href="weldpro.html">WeldPro</a> studies</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta band">
+  <div class="wrap band-in">
+    <div>
+      <h2>Tell us about <em>your part.</em></h2>
+      <p class="sub">The part, the process, the question. We reply with what a study would take and what it would show.</p>
+    </div>
+    <a class="btn btn-accent" href="contact.html">Discuss your case</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html"><span>Pango Solutions</span></a>
+      <p>Makers of SiM2Pro. Finite element software for manufacturing processes, and the engineering around it.</p>
+      <p class="addr">Madipakkam, Chennai, Tamil Nadu<br><a href="tel:+918248466597">+91 82484 66597</a><br><a class="mail-link" href="mailto:m2pro.engg@gmail.com">m2pro.engg@gmail.com</a></p>
+    </div>
+    <nav aria-label="Products">
+      <b>Products</b>
+      <a href="sim2pro.html">SiM2Pro</a><a href="weldpro.html">WeldPro</a><a href="htpro.html">HTPro</a><a href="metapro.html">MetaPro</a><a href="matpro.html">MatPro</a>
+    </nav>
+    <nav aria-label="Company">
+      <b>Company</b>
+      <a href="services.html">Services</a><a href="learn.html">Learn</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal"><span>&copy; <span id="year"></span> Pango Solutions</span><span>CalculiX, Gmsh, OpenFOAM, PrePoMax and SfePy are the work of their own authors.</span><span>Photographs via Wikimedia Commons. <a href="credits.html">Credits</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
